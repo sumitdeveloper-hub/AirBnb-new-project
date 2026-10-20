@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <!-- its personal -->
+     <div class="row">
+        <div class="col-8 offset-2">
+            <br/><br/>
+    <h3>create new page</h3>
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div >
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" placeholder="add a catchy title" type="text" class="form-control" required>
+            <div class="valid-feedback">Title looks great!!</div>
+        </div>      
+        <br/><br/>
+         <div>
+            <label for="Image" class="form-label">Upload Listing Image</label>
+            <input name="image" class="form-control" type="file" >
+        </div>
+        <br/><br/>
+        <div>
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" placeholder="1200" class="form-control" required>
+            <div class="invalid-feedback">please enter a valid price!!</div>
+        </div>
+        <br/><br/>
+        <div>
+            <label for="description" class="form-label">Description</label>
+             <textarea name="listing[description]" placeholder="enter description" type="text" class="form-control" required></textarea>
+             <div class="invalid-feedback">please enter a description!!</div>
+        </div> 
+        <br/><br/>
+        <div class="row">
+        <div class="col-md-4">
+            <label for="Location" class="form-label">Location</label>
+            <input name="listing[location]" placeholder="jaipur,rajasthan" type="text" class="form-control" required>
+            <div class="invalid-feedback">please enter a valid Location!!</div>
+        </div> 
+        <div class="col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" placeholder="india" type="text" class="form-control" required>
+            <div class="invalid-feedback">please enter a country name!!</div>
+        </div>
+        </div>
+        
+        <br/><br/>
+
+        <button class="btn btn-dark">create</button>
+    </form>
+    </div>
+    </div>
+    
+</body>
