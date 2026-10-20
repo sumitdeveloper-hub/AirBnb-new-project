@@ -268,7 +268,6 @@ app.delete("/listing/:id/review/:reviewId",wrapAsync(async (req,res)=>{
 // error handling middleware
 app.use((err,req,res,next)=>{
     let {status,message}=err;
-    console.log(err);
     res.render("error.ejs",{message});
 })
 app.listen(8080,()=>{
