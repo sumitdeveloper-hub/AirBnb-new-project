@@ -121,6 +121,9 @@ async function main() {
   await mongoose.connect(dbUrl);
 }
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 // getting started with the signup process;
 app.get("/signup",(req,res)=>{
     res.render("users/signup.ejs");
